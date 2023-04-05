@@ -33,7 +33,7 @@ public class SpinnersActivity extends AppCompatActivity {
                 int index2 = spinner2.getSelectedItemPosition();
                 String text2 = spinner2.getSelectedItem().toString();
 
-                String s = String.format("전화:%s(%d)   wnth:%ㄴ(%ㅇ)", text1,index1,text2,index2);
+                String s = String.format("전화:%s(%d)  주소:%ㄴ(%ㅇ)", text1,index1,text2,index2);
                 Toast.makeText(SpinnersActivity.this,s,Toast.LENGTH_SHORT).show();
             }
         };
