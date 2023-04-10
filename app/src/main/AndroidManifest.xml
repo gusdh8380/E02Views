@@ -30,6 +30,7 @@
             android:label="@string/action_signUp" />
         <activity
             android:name=".MainActivity"
+            android:label="action_main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

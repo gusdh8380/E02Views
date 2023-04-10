@@ -3,6 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,23 +23,26 @@ public class MemoActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String title = editText_title.getText().toString();
-                if (isEmptyOrWhiteSpace(title))
-                    editText_title.setError("제목을 입력하세요");
+                    String title = editText_title.getText().toString();
+                    if (isEmptyOrWhiteSpace(title))
+                        editText_title.setError("제목을 입력하세요");
 
-                String content = editText_content.getText().toString();
+                    String content = editText_content.getText().toString();
 
-                if (isEmptyOrWhiteSpace(content))
-                    editText_content.setError("내용을 입력하세요");
+                    if (isEmptyOrWhiteSpace(content))
+                        editText_content.setError("내용을 입력하세요");
 
             // 메모 데이터를 서버에 전송하는 코드를 구현해야 함.
+
             String msg = "저장 성공: " + title;
+
             Toast.makeText(MemoActivity.this, msg, Toast.LENGTH_LONG).show();
-
-
         }
     };
+
     button.setOnClickListener(listener);
+    Intent intent = new Intent(this, MainActivity.class);
+    startActivity(intent);
 } static boolean isEmptyOrWhiteSpace(String s) {
     if (s == null) return true; return s.toString().trim().length() == 0;
 }
