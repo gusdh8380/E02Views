@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.E02View">
-        <activity android:name=".SpinnersActivity"
+        <activity
+            android:name=".AlertsActivity"
+            android:label="@string/action_alerts" />
+        <activity
+            android:name=".SpinnersActivity"
             android:label="@string/action_spinners" />
         <activity
             android:name=".CheckboxesActivity"
