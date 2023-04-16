@@ -14,6 +14,7 @@ public class MemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memo);
+
         final EditText editText_title = findViewById(R.id.editText_title);
         editText_title.setText("공지사항 입니다.");
 
